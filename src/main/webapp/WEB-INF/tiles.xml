@@ -4,8 +4,9 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
  <tiles-definitions> 
      <definition name="base" 
-         template="/views/layout/default_layout.jsp"> 
+         template="/views/layout/index.jsp">
          <put-attribute name="header" value="/views/common/header.jsp" />
+         <put-attribute name="left_menu" value="/views/common/left_menu.jsp" />
          <put-attribute name="body" value="" /> 
          <put-attribute name="footer" value="/views/common/footer.jsp" />
      </definition> 
