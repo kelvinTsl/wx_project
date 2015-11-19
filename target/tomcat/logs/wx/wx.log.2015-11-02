@@ -1,0 +1,23 @@
+[ERROR] 2015-11-02 09:59:23 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 09:59:24 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 10:01:48 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 10:01:48 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 11:41:44 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 11:41:45 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:10:08 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:10:09 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:27:35 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:27:36 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:28:37 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:28:38 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:29:45 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:29:46 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:39:51 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:39:51 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:40:27 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:40:28 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:41:53 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:41:54 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ [ERROR] 2015-11-02 15:42:47 com.alibaba.druid.pool.DruidAbstractDataSource@(DruidAbstractDataSource.java:873):maxIdle is deprecated
+ [WARN ] 2015-11-02 15:42:48 org.hibernate.id.UUIDHexGenerator@(UUIDHexGenerator.java:59):HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+ 
