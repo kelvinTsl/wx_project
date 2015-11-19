@@ -63,7 +63,7 @@ public class CommonController {
         }
 
 //        model.addAttribute("abc",abc);
-        model.addAttribute("message", "中文message");
+        model.addAttribute("message", "中文message1111");
 
         String a = test1();
         System.out.println(a);
