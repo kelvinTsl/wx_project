@@ -52,15 +52,23 @@
       <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> 
       <init-param>
           <param-name>contextConfigLocation</param-name>
-          <param-value>classpath:spring-mvc.xml</param-value>
+          <param-value>classpath:app-mvc.xml</param-value>
       </init-param>
       <load-on-startup>1</load-on-startup><!-- load-on-startup必须放在最后 -->
   </servlet>
   <!-- Spring MVC配置文件结束 -->
-  
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.css</url-pattern>
+    </servlet-mapping>
+
   <servlet-mapping>
       <servlet-name>SpringMVC</servlet-name>
-      <url-pattern>/</url-pattern>
+      <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
   
   <!-- 首页 -->

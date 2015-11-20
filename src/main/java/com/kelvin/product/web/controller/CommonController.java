@@ -65,15 +65,18 @@ public class CommonController {
 //        model.addAttribute("abc",abc);
         model.addAttribute("message", "中文message1111");
 
-        String a = test1();
-        System.out.println(a);
-
         return "index";
     }
     
     @RequestMapping(value="index", method = RequestMethod.POST)
     public String test(HttpServletRequest request, String name) {
     	request.setAttribute("name", name);
+        return "index";
+    }
+
+    @RequestMapping(value="test", method = RequestMethod.GET)
+    public String test1(HttpServletRequest request, String name) {
+        request.setAttribute("name", "12121321sdfasdfdsfdsafdsafdasfa");
         return "index";
     }
 

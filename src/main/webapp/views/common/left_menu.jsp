@@ -5,7 +5,7 @@
           <li>
               <h4 class="M1"><span></span>系统公告</h4>
               <div class="list-item none">
-                <a href='#'>系统公告1</a>
+                <a href='test' >系统公告1</a>
                 <a href=''>系统公告2</a>
                 <a href=''>系统公告3</a>
                 <a href=''>系统公告4</a>
@@ -26,7 +26,7 @@
               <div class="list-item none">
                 <a href=''>基础教学1</a>
                 <a href=''>基础教学2</a>
-                <a href=''>基础教学3</a>
+                <a href=''>基础教学3</a>3
               </div>
             </li>
     				<li>

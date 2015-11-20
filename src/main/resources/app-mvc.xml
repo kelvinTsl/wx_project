@@ -22,7 +22,11 @@
     <!-- 会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter 两个bean,是spring MVC为@Controllers分发请求所必须的 -->
     <!-- 指定自己定义的validator -->
     <mvc:annotation-driven validator="validator"/>
-    
+
+    <!--<mvc:resources location="/assets/" mapping="/assets/**" />
+    <mvc:resources location="/assets/css/" mapping="/css/**" />
+    <mvc:default-servlet-handler/>-->
+
     <!-- ajax返回值编码设置 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">  
         <property name="messageConverters">  
