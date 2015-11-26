@@ -23,9 +23,9 @@
     <!-- 指定自己定义的validator -->
     <mvc:annotation-driven validator="validator"/>
 
-    <!--<mvc:resources location="/assets/" mapping="/assets/**" />
-    <mvc:resources location="/assets/css/" mapping="/css/**" />
-    <mvc:default-servlet-handler/>-->
+    <mvc:resources location="/assets/" mapping="/assets/**" />
+    <mvc:resources location="/assets/css/" mapping="/assets/css/**" />
+    <mvc:resources location="/assets/images/" mapping="/assets/images/**" />
 
     <!-- ajax返回值编码设置 -->
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">  
