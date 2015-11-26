@@ -24,4 +24,8 @@
         <put-attribute name="body" value="/WEB-INF/views/static/404.jsp" />
     </definition>
 
+    <definition name="survey.list" extends="base">
+        <put-attribute name="body" value="/WEB-INF/views/survey/list.jsp" />
+    </definition>
+
 </tiles-definitions>
