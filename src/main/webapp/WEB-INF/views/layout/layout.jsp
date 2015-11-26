@@ -31,11 +31,9 @@
 			</ul>
 		</div>
 		<div class="main">
+			<tiles:insertAttribute name="body" />
 		</div>
     </div>
-	<div>
-	  <tiles:insertAttribute name="body" />
-	</div>
 </div>
 <div class="bottom"></div>
 <div id="footer">

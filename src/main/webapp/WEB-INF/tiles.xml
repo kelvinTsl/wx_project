@@ -4,15 +4,24 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
  <tiles-definitions> 
      <definition name="base" 
-         template="/views/layout/layout.jsp">
-         <put-attribute name="header" value="/views/common/header.jsp" />
-         <put-attribute name="left_menu" value="/views/common/left_menu.jsp" />
+         template="/WEB-INF/views/layout/layout.jsp">
+         <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+         <put-attribute name="left_menu" value="/WEB-INF/views/common/left_menu.jsp" />
          <put-attribute name="body" value="" /> 
-         <put-attribute name="footer" value="/views/common/footer.jsp" />
-     </definition> 
-     
-     <definition name="index" extends="base"> 
-         <put-attribute name="body" value="/views/index.jsp" />
-     </definition> 
-   	
- </tiles-definitions>
+         <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+     </definition>
+
+    <definition name="none"
+                template="/WEB-INF/views/layout/default_layout.jsp">
+        <put-attribute name="body" value="" />
+    </definition>
+
+    <definition name="index" extends="base">
+         <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+     </definition>
+
+    <definition name="404" extends="none">
+        <put-attribute name="body" value="/WEB-INF/views/static/404.jsp" />
+    </definition>
+
+</tiles-definitions>

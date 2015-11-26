@@ -1,10 +1,6 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ page language="java"  contentType="text/html; charset=utf-8" %>
 
-
-
-
-
 				<spring:message code="abc" />
                 <spring:message code="abc" />
                 <spring:message code="abc" />

@@ -1,6 +1,7 @@
 package com.kelvin.product.web.dao;
 
 import com.kelvin.product.core.generic.dao.IGenericDao;
+import com.kelvin.product.web.model.system.BaseUser;
 import org.hibernate.Session;
 
 /**
@@ -8,4 +9,5 @@ import org.hibernate.Session;
  */
 public interface IUserDao extends IGenericDao {
 
+    int countUserByTeleAndPasswor(BaseUser user);
 }

@@ -56,12 +56,9 @@ public class GenericDao implements IGenericDao {
 
 	@Override
 	public <T> Serializable save(T entity) {
-		LocalStatus status = getSession().getTransaction().getLocalStatus();
-		int code = getSession().getTransaction().hashCode();
 		try{
 			Serializable id = getSession().save(entity);
 //			getSession().flush();
-			status = getSession().getTransaction().getLocalStatus();
 			return id;
 		}catch(Exception e){
 			logger.error("保存实体异常");
@@ -248,7 +245,7 @@ public class GenericDao implements IGenericDao {
 	 * @param entityClass
 	 * @return
 	 */
-	private <T> Criteria createCriteria(Class<T> entityClass) {
+	public <T> Criteria createCriteria(Class<T> entityClass) {
 		Criteria criteria = getSession().createCriteria(entityClass);
 		return criteria;
 	}

@@ -17,15 +17,11 @@
     <body>
     	<input type="hidden" value="<%=request.getContextPath()%>" id="req_path"/>
    		<div>
-    		<tiles:insertAttribute name="header" />
-    		${path}
-    		头部-layout
     	</div>
     	
     	<div>
 			<tiles:insertAttribute name="body" />
 		</div>
 		<br/>
-		<tiles:insertAttribute name="footer" />
     </body>
 </html>

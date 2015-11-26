@@ -18,7 +18,7 @@ body{font-family:Microsoft YaHei,Verdana,Arial,SimSun;color:#666;font-size:14px;
 #footer{height:50px;line-height:50px;background:#5e5e5e;width:100%;position:absolute;z-index:200;bottom:0;text-align:center;}
 #footer p{text-align:center;line-height:50px;color:#fbfbfb;}
 /*****主体部分******/
-#content{ background:#FC0;width:100%;top:80px;position:absolute;z-index:10;bottom:50px;}
+#content{ background:#f6f6f6;width:100%;top:80px;position:absolute;z-index:10;bottom:50px;}
 /**左侧菜单***/
 .left_menu{float:left;width:300px;background:#32323a;height:100%;position:absolute;top:0;left:0;overflow:auto;border-left:5px solid #f6f6f6;}
 .left_menu ul li {width:300px; display:inline; }
@@ -42,7 +42,7 @@ body{font-family:Microsoft YaHei,Verdana,Arial,SimSun;color:#666;font-size:14px;
 .M9 span{background:url(../images/ioc.png) -72px -70px;}
 .M10 span{background:url(../images/ioc.png) -3px -105px;}
 /***右侧内容****/
-.m-right{margin-left:300px;height:100%;}
+.m-right{margin-left:310px;height:100%;}
 .right-nav{height:50px;border-bottom:1px solid #d1d1d1;background:#f6f6f6;}
 .right-nav li{float:left;margin-left:5px;line-height:50px;color:#464646;font-size: 14px;}
 .right-nav li img{position:relative;top:17px;left:15px;}
