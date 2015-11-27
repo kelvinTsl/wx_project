@@ -44,7 +44,15 @@ public class Survey {
     private Date createTime;
 
     @Column(name="status",nullable = true, length=2)
-    private int status;
+    private Integer status;
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 
     public int getSurveyId() {
         return surveyId;
