@@ -10,6 +10,8 @@ import java.util.List;
  */
 public interface SurveyService {
 
-    List<Survey> findAllByQueryForPage(Survey survey, PageDTO pageDTO);
+    List<Survey> findAllByQueryForPage(Survey survey, PageDTO pageDTO, String risk);
+
+    int updateStatus(Survey survey);
 
 }

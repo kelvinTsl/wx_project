@@ -23,16 +23,28 @@ public class SurveyServiceImpl extends GenericServiceImpl implements SurveyServi
     @Autowired
     private ISurveyDao surveyDao;
 
-    public List<Survey> findAllByQueryForPage(Survey survey, PageDTO pageDTO){
+    public List<Survey> findAllByQueryForPage(Survey survey, PageDTO pageDTO, String risk){
         if(pageDTO.getCurPage() == 0){
             pageDTO.setCurPage(1);
         }
         if(pageDTO.getPageNum() == 0){
             pageDTO.setPageNum(10);
         }
-        List<Survey> list = surveyDao.findListByHql(survey, pageDTO);
-        Long count = surveyDao.countListByHql(survey,pageDTO);
+        List<Survey> list = surveyDao.findListByHql(survey, pageDTO, risk);
+        Long count = surveyDao.countListByHql(survey,pageDTO, risk);
         pageDTO.setTotal(count.intValue());
+        if(count > 0) {
+            double a = new Double(count);
+            double b = new Double(pageDTO.getPageNum());
+            pageDTO.setPageSize((int) Math.ceil(a / b));
+        }else{
+            pageDTO.setPageSize(1);
+        }
+
         return list;
+    }
+
+    public int updateStatus(Survey survey){
+        return surveyDao.updateStatus(survey);
     }
 }

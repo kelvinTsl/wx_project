@@ -46,6 +46,17 @@ public class Survey {
     @Column(name="status",nullable = true, length=2)
     private Integer status;
 
+    @Column(name="remark",nullable = true, length = 512)
+    private String remark;
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
     public Integer getStatus() {
         return status;
     }

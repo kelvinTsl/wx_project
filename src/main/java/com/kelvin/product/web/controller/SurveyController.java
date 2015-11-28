@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -34,9 +35,24 @@ public class SurveyController {
      */
     @RequestMapping("/list")
     public String list(Survey survey, PageDTO pageDTO, BindingResult result, Model model, HttpServletRequest request){
-        List<Survey> list = surveyService.findAllByQueryForPage(survey, pageDTO);
+        String risk = request.getParameter("risk");
+        List<Survey> list = surveyService.findAllByQueryForPage(survey, pageDTO, risk);
+        model.addAttribute("survey",survey);
         model.addAttribute("surveys",list);
         model.addAttribute("pageDTO",pageDTO);
+        model.addAttribute("risk",risk);
         return "survey.list";
+    }
+
+    @RequestMapping("/updateStatus")
+    @ResponseBody
+    public String updateStatus(Survey survey, BindingResult result, Model model, HttpServletRequest request){
+        String responseTxt = "{\"status\":\"success\"}";
+        int i = surveyService.updateStatus(survey);
+        if(i == 1) {
+            return responseTxt;
+        }else{
+            return "{\"status\":\"false\"}";
+        }
     }
 }

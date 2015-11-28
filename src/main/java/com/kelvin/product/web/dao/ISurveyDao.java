@@ -11,6 +11,7 @@ import java.util.List;
  */
 public interface ISurveyDao extends IGenericDao {
 
-    List<Survey> findListByHql(Survey survey, PageDTO pageDTO);
-    Long countListByHql(Survey survey, PageDTO pageDTO);
+    List<Survey> findListByHql(Survey survey, PageDTO pageDTO, String risk);
+    Long countListByHql(Survey survey, PageDTO pageDTO, String risk);
+    int updateStatus(Survey survey);
 }

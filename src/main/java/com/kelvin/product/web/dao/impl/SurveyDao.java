@@ -16,18 +16,18 @@ import java.util.List;
 @Repository
 public class SurveyDao extends GenericDao implements ISurveyDao {
 
-    public Long countListByHql(Survey survey, PageDTO pageDTO){
+    public Long countListByHql(Survey survey, PageDTO pageDTO, String risk){
         String hql = "select count(a) from Survey a where 1 = 1 ";
         Query query = null;
-        query = addParam(query, hql, survey, pageDTO, 1);
+        query = addParam(query, hql, survey, pageDTO, 1, risk);
         Long count = (Long)query.uniqueResult();
         return count;
     }
 
-    public List<Survey> findListByHql(Survey survey, PageDTO pageDTO){
+    public List<Survey> findListByHql(Survey survey, PageDTO pageDTO, String risk){
         String hql = "select a from Survey a where 1 = 1 ";
         Query query = null;
-        query = addParam(query, hql, survey, pageDTO, 0);
+        query = addParam(query, hql, survey, pageDTO, 0, risk);
         int num = pageDTO.getPageNum();
         int page = pageDTO.getCurPage();
         int first = (page - 1)*num;
@@ -36,14 +36,14 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
         return list;
     }
 
-    private Query addParam(Query query, String hql, Survey survey, PageDTO pageDTO, int i){
+    private Query addParam(Query query, String hql, Survey survey, PageDTO pageDTO, int i, String risk){
         String candidateName = null;
         String candidateSex = null;
         String candidateCellphone = null;
         if(survey.getCandidate() != null) {
             candidateName = survey.getCandidate().getCandidateName();
             if (!StringUtil.isEmpty(candidateName)) {
-                hql += " and a.candidate.candidateName = :name";
+                hql += " and a.candidate.candidateName like :name";
             }
             candidateSex = survey.getCandidate().getCandidateSex();
             if (!StringUtil.isEmpty(candidateSex)) {
@@ -53,7 +53,18 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
 
             candidateCellphone = survey.getCandidate().getCandidateCellphone();
             if (!StringUtil.isEmpty(candidateCellphone)) {
-                hql += " and a.candidate.candidateCellphone = :cellphone";
+                hql += " and a.candidate.candidateCellphone like :cellphone";
+            }
+        }
+        if(!StringUtil.isEmpty(risk)){
+            if("H".equals(risk)){
+                hql += " and surveyScore > 50";
+            }
+            if("M".equals(risk)){
+                hql += " and surveyScore < 50 and surveyScore > 20";
+            }
+            if("L".equals(risk)){
+                hql += " and surveyScore < 20";
             }
         }
         Integer status = survey.getStatus();
@@ -62,25 +73,36 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
         }
         if(i == 0) {
             if (!StringUtil.isEmpty(pageDTO.getOrder())) {
-                hql += "order by " + pageDTO.getOrder();
+                hql += " order by " + pageDTO.getOrder();
                 if (PageDTO.PAGE_ORDER0_TYPE_ASC.equals(pageDTO.getOrderType()) || PageDTO.PAGE_ORDER0_TYPE_DESC.equals(pageDTO.getOrderType())) {
                     hql += " " + pageDTO.getOrderType();
                 }
+            }else{
+                hql += " order by createTime DESC";
             }
         }
         query = getSession().createQuery(hql);
         if(!StringUtil.isEmpty(candidateName)) {
-            query.setParameter("name", candidateName);
+            query.setParameter("name", "%"+candidateName+"%");
         }
         if(!StringUtil.isEmpty(candidateSex)){
             query.setParameter("sex", candidateSex);
         }
         if(!StringUtil.isEmpty(candidateCellphone)){
-            query.setParameter("cellphone", candidateCellphone);
+            query.setParameter("cellphone", "%"+candidateCellphone+"%");
         }
         if(status != null){
             query.setParameter("st", status);
         }
         return query;
+    }
+
+    public int updateStatus(Survey survey){
+        String hql = "update Survey a set a.status = :status, a.remark=:remark where a.surveyId = :surveyId";
+        Query query = getSession().createQuery(hql);
+        return query.setParameter("status",survey.getStatus())
+                .setParameter("remark",survey.getRemark())
+                .setParameter("surveyId",survey.getSurveyId())
+                .executeUpdate();
     }
 }
