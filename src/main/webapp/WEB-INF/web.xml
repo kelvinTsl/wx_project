@@ -56,10 +56,11 @@
             <param-name>targetFilterLifecycle</param-name>
             <param-value>true</param-value>
         </init-param>
+
     </filter>
     <filter-mapping>
         <filter-name>shiroFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/rest/*</url-pattern>
     </filter-mapping>
 
   <servlet>
@@ -94,7 +95,7 @@
     <!-- 错误页 -->
     <error-page>
         <error-code>404</error-code>
-        <location>/rest/page/404</location>
+        <location>/static/404.jsp</location>
     </error-page>
     <error-page>
         <error-code>500</error-code>

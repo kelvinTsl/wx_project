@@ -18,7 +18,7 @@
         <property name="filterChainDefinitions">
             <value>
                 <!-- 静态资源允许访问 -->
-                /logout = logout
+                /rest/logout = logout
                 /assets/** = anon
                 /rest/page/** = anon
                 /rest/login = anon

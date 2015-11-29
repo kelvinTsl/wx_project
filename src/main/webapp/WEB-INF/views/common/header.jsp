@@ -10,7 +10,7 @@
 			<li><a href="#"><shiro:principal/></a></li>
 			<li><a href="#">修改密码</a></li>
 			<li><a href="#">设置</a></li>
-			<li><a href="<c:url value="/logout"/>">退出</a></li>
+			<li><a href="<c:url value="/rest/logout"/>">退出</a></li>
 		</ul>
 	</div>
 </div>
