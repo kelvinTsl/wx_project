@@ -77,7 +77,7 @@
       <tr style="height: 30px">
         <th style="width:5%;">序号</th>
         <th style="width:10%">姓名</th>
-        <th style="width:5%"性别</th>
+        <th style="width:5%">性别</th>
         <th style="width:5%" onclick="order('candidate.candidateAge','DESC')">年龄</th>
         <th style="width:20% " onclick="order('candidate.candidateCellphone','DESC')">联系电话</th>
         <th style="width:10%" onclick="order('surveyScore','DESC')">风险</th>
@@ -93,7 +93,7 @@
 
         <td>${survey.candidate.candidateName}</td>
         <td>${survey.candidate.candidateSex}</td>
-        <td></td>
+        <td>${survey.candidate.candidateAge}</td>
         <td>${survey.candidate.candidateCellphone}</td>
         <td>${survey.surveyScore}</td>
         <td>
