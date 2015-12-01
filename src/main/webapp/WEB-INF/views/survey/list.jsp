@@ -35,7 +35,7 @@
           </select>
         </td>
         <td width="10%">年龄</td>
-        <td width="20%"><input type="text" value=""/></td>
+        <td width="20%"><input type="text" name="candidate.candidateAge" value="${survey.candidate.candidateAge}"/></td>
         <td width="10%">风险</td>
         <td width="20%">
           <select id="risk" name="risk">
@@ -77,8 +77,8 @@
       <tr style="height: 30px">
         <th style="width:5%;">序号</th>
         <th style="width:10%">姓名</th>
-        <th style="width:5%">性别</th>
-        <th style="width:5%">年龄</th>
+        <th style="width:5%"性别</th>
+        <th style="width:5%" onclick="order('candidate.candidateAge','DESC')">年龄</th>
         <th style="width:20% " onclick="order('candidate.candidateCellphone','DESC')">联系电话</th>
         <th style="width:10%" onclick="order('surveyScore','DESC')">风险</th>
         <th style="width:10%">状态</th>

@@ -40,6 +40,7 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
         String candidateName = null;
         String candidateSex = null;
         String candidateCellphone = null;
+        Integer candidateAge = null;
         if(survey.getCandidate() != null) {
             candidateName = survey.getCandidate().getCandidateName();
             if (!StringUtil.isEmpty(candidateName)) {
@@ -50,7 +51,10 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
                 hql += " and a.candidate.candidateSex = :sex";
             }
             //年龄缺失
-
+            candidateAge = survey.getCandidate().getCandidateAge();
+            if(candidateAge != null && candidateAge > 0){
+                hql += " and a.candidate.candidateAge = :age ";
+            }
             candidateCellphone = survey.getCandidate().getCandidateCellphone();
             if (!StringUtil.isEmpty(candidateCellphone)) {
                 hql += " and a.candidate.candidateCellphone like :cellphone";
@@ -87,6 +91,9 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
         }
         if(!StringUtil.isEmpty(candidateSex)){
             query.setParameter("sex", candidateSex);
+        }
+        if(candidateAge != null && candidateAge > 0){
+            query.setParameter("age", candidateAge);
         }
         if(!StringUtil.isEmpty(candidateCellphone)){
             query.setParameter("cellphone", "%"+candidateCellphone+"%");

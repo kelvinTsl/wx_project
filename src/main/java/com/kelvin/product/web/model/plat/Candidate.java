@@ -24,6 +24,8 @@ public class Candidate {
     private String candidateName;
     @Column(name="candidate_sex",nullable = false, length=16)
     private String candidateSex;
+    @Column(name="candidate_age",nullable = true, length=3)
+    private Integer candidateAge;
     @Column(name="candidate_password",nullable = false, length=255)
     private String candidatePassword;
     @Column(name="candidate_city",nullable = true, length=16)
@@ -43,6 +45,14 @@ public class Candidate {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name="update_time")
     private Date updateTime;
+
+    public Integer getCandidateAge() {
+        return candidateAge;
+    }
+
+    public void setCandidateAge(Integer candidateAge) {
+        this.candidateAge = candidateAge;
+    }
 
     public int getCandidate_id() {
         return candidate_id;
