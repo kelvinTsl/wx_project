@@ -25,7 +25,7 @@
     	<div class="right-nav">
 			<ul>
 				<li style="margin-left:25px;">您当前的位置：</li>
-				<li><a id="nav_1" href="#">报告查询</a></li>
+				<li><a id="nav_1" href="#">问卷查询</a></li>
 				<%--<li>></li>--%>
 				<%--<li><a id="nav_2" href="#">最新公告</a></li>--%>
 			</ul>
