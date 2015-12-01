@@ -62,13 +62,13 @@ public class SurveyDao extends GenericDao implements ISurveyDao {
         }
         if(!StringUtil.isEmpty(risk)){
             if("H".equals(risk)){
-                hql += " and surveyScore > 50";
+                hql += " and surveyScore > 83";
             }
             if("M".equals(risk)){
-                hql += " and surveyScore < 50 and surveyScore > 20";
+                hql += " and surveyScore < 84 and surveyScore > 59";
             }
             if("L".equals(risk)){
-                hql += " and surveyScore < 20";
+                hql += " and surveyScore < 60";
             }
         }
         Integer status = survey.getStatus();
